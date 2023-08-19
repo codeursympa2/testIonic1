@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>SENFLEUR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--<ion-label>Se connecter</ion-label>--->
+
+
+  <ion-card color="">
+    <ion-card-header>
+      <ion-card-title>Bienvenue</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="background-container">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <ion-item lines="full">
+                <ion-label position="floating">Votre email</ion-label>
+                <ion-input formControlName ="email"  type="text" required></ion-input>
+                <ion-label position="floating">Votre mot de passe</ion-label>
+                <ion-input formControlName="password" type="password" required></ion-input>
+                <br>
+            </ion-item>
+            <br>
+            <ion-button type="submit" color="success" name="Se connecter" expand="block">Se connecter</ion-button>
+            <ion-button  color="danger" href="/signup"  name="" expand="block">
+              S'inscrire
+           </ion-button>
+          </form>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

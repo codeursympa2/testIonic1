@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/visite" text="Retour" style="color: red;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h3><Strong> {{ token }} </Strong></h3>
+
+ <ion-list class="c" *ngFor="let fleur of fleurListe">
+    <ion-card class="card" *ngIf="fleur.id === token">
+        <ion-img [src]="fleur.imgUrl"></ion-img>
+        <ion-label class="desc"> {{ fleur.desc }} </ion-label>
+    </ion-card>
+ </ion-list> 
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "testIonic1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

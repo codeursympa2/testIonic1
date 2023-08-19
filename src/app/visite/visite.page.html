@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Retour" style="color: red;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Visite</ion-title>
+  </ion-toolbar>
+ 
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <strong>Fleur rouge de la méditeranée</strong>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="../../assets/fleur-rouge.jpg" alt="">
+        <br>
+        <strong>Fleur rouge au prix bas</strong><br>
+        <strong>Disponible en magasin</strong>
+      </ion-card-content>
+      <ion-button (click)="godetails('Fl_rouge')">
+        Details
+      </ion-button>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <strong>Fleur blanche de chine</strong>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="../../assets/fleur-blanche.jpg" alt="">
+        <br>
+        <strong>Fleur rouge au prix bas</strong><br>
+        <strong>Disponible en magasin</strong>
+      </ion-card-content>
+      <ion-button (click)="godetails('Fl_blanche')">
+        Details
+      </ion-button>
+  </ion-card>
+</ion-content>

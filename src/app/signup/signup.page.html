@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button color="danger">
+      <ion-back-button defaultHref="/login"  text="Retour" style="color: white">
+      </ion-back-button>
+    </ion-button>
+    <ion-title>SENFLEUR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--<ion-label>Inscription</ion-label>-->
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Inscription</ion-card-title>
+    <ion-card-subtitle></ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Prénom</ion-label>
+        <ion-input formControlName ="prenom"  type="text" required></ion-input>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input formControlName ="nom"  type="text" required></ion-input>
+        <ion-label position="floating">Téléphone</ion-label>
+        <ion-input formControlName ="tel"  type="number" required></ion-input>
+        <ion-label position="floating">Votre email</ion-label>
+        <ion-input formControlName ="email"  type="text" required></ion-input>
+        <ion-label position="floating">Votre mot de passe</ion-label>
+        <ion-input formControlName="password" type="password" required></ion-input>
+        <p></p>
+      </ion-item>
+
+      <ion-button type="submit" color="success" name="" expand="block">S'inscrire</ion-button>
+
+      <ion-button  color="danger" href="/login"  name="" expand="block">
+         Se connecter
+      </ion-button>
+
+    </form>
+  </ion-card-content>
+</ion-card>
+</ion-content>
